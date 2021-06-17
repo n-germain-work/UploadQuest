@@ -5,14 +5,16 @@
     <title>MY APP</title>
   </head>
   <body>
+    <h1>Welcomeàl'upload en masse</h1>
     <!--  SINGLE FILE -->
+    <h2>Un seul fichier, max 3mo, uniquement png</h2>
     <form action="/uploadfile" enctype="multipart/form-data" method="POST">
       <input type="file" name="monfichier" />
       <input type="submit" value="Valider le fichier" />
     </form>
 
     <!-- MULTIPLE FILES -->
-
+    <h2>Plusieurs fichiers, mêmes règles qu'au dessus ^^</h2>
     <form action="/uploadmultiple" enctype="multipart/form-data" method="POST">
       <input type="file" name="monfichier" multiple />
       <input type="submit" value="Valider les fichiers" />

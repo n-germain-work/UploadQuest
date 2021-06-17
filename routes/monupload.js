@@ -1,7 +1,18 @@
 var express = require('express');
 var router = express.Router();
 const multer = require('multer');
-const upload = multer({ dest: 'tmp/' });
+const upload = multer({
+  dest: 'tmp/',
+  limits: { fileSize: 3145728 },
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype == 'image/png') {
+      cb(null, true);
+    } else {
+      cb(null, false);
+      return cb(new Error('Only .png format allowed!'));
+    }
+  },
+});
 const fs = require('fs');
 
 /* POST file. */
