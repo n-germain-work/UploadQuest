@@ -1,7 +1,7 @@
 App pour tester l'upload de fichier.
 
 Etapes :
-- cloner le repo
+- clonez le repo
 - npm i
 - npm start
 - ouvrez dans votre browser http://localhost:3000/
